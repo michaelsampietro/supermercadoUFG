@@ -7,6 +7,8 @@ import javax.swing.JOptionPane;
 
 import br.com.Caixa.CaixaBO;
 import br.com.Caixa.CaixaTO;
+import br.com.Gerente.GerenteBO;
+import br.com.Gerente.GerenteTO;
 import br.com.produto.ProdutoBO;
 import br.com.produto.ProdutoTO;
 
@@ -16,10 +18,10 @@ public class Principal {
 //		Principal p = new Principal();
 //		p.iniciaEstoque();
 		
-		// Cria gerente e funcionários
+		// Cria gerente e funcionï¿½rios
 //		Gerente     g1 = new Gerente(01, "Nome Gerente", 99999-9999, "M", "gerente");
 //		Funcionario f1 = new Funcionario(01, "Nome Funcionario 1", 99999-9999, "M", "gerente");
-		CaixaTO       cx1           = new CaixaTO(01, "caixa 1", "Funcionário 1");
+		CaixaTO       cx1           = new CaixaTO(01, "caixa 1", "Funcionï¿½rio 1");
 //		cx1.setFuncionarioAbertura(f1.getNome());
 		
 //		GerenteBO     gerenteBO     = new GerenteBO();
@@ -35,13 +37,18 @@ public class Principal {
 		//teste
 		
 //		gerenteBO.adicionaEstoque(p1, 5);//produtoTO e quantidade adicionada
-//		Permitir o pagamento das vendas em dinheiro ou cartão. Caso seja em dinheiro, o sistema deve informar o valor do troco
+//		Permitir o pagamento das vendas em dinheiro ou cartï¿½o. Caso seja em dinheiro, o sistema deve informar o valor do troco
 		
 		// Vende produtos
 		caixaBO.vendeProduto(cx1.getId(), cx1.getFuncionarioAbertura(), p1, 5, "Cliente 1", new Date());
+
+		GerenteBO gerenteBO = new GerenteBO();
+		GerenteTO g1 = new GerenteTO(0, "Michael", "999999", "M", "Gerente");
+
+		gerenteBO.emiteRelatorioVendas();
 		
-		//Consulta preço
-		JOptionPane.showMessageDialog(null, "Preço do produto: " + produtoBO.consultaPreco(p1), 
-				"CONSULTA DE PREÇO", JOptionPane.INFORMATION_MESSAGE);
+		//Consulta preï¿½o
+		JOptionPane.showMessageDialog(null, "Preï¿½o do produto: " + produtoBO.consultaPreco(p1), 
+				"CONSULTA DE PREï¿½O", JOptionPane.INFORMATION_MESSAGE);
 	}
 }
