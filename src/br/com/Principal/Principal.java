@@ -28,17 +28,20 @@ public class Principal {
 
 		// Cadastra produtos
 //		ProdutoTO p1 = gerenteBO.adicionaProduto(01, "Bola futebol", "Bola de futebol de campo oficial da copa", 50.0, "UN"); //id e atributos do produto
+		
+		//teste
+		ProdutoBO produtoBO = new ProdutoBO();
+		ProdutoTO p1 = produtoBO.adicionaProduto(01, "Bola futebol", "Bola de futebol de campo oficial da copa", 50.0, "UN"); //id e atributos do produto
+		//teste
+		
 //		gerenteBO.adicionaEstoque(p1, 5);//produtoTO e quantidade adicionada
 //		Permitir o pagamento das vendas em dinheiro ou cartão. Caso seja em dinheiro, o sistema deve informar o valor do troco
 		
 		// Vende produtos
-		String forma_pagamento = JOptionPane.showInputDialog("Forma de pagamento: Dinheiro ou Cartão");
-		if (forma_pagamento.equalsIgnoreCase("dinheiro")) {
-			String valor_pago = JOptionPane.showInputDialog("Valor pago: ");
-		} else if (forma_pagamento.equalsIgnoreCase("cartão")) {
-			
-		}
-//		caixaBO.vendeProduto(cx1.getId(), cx1.getFuncionarioAbertura(), p1, 5, "Cliente 1", new Date());
+		caixaBO.vendeProduto(cx1.getId(), cx1.getFuncionarioAbertura(), p1, 5, "Cliente 1", new Date());
 		
+		//Consulta preço
+		JOptionPane.showMessageDialog(null, "Preço do produto: " + produtoBO.consultaPreco(p1), 
+				"CONSULTA DE PREÇO", JOptionPane.INFORMATION_MESSAGE);
 	}
 }

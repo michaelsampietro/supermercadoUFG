@@ -14,9 +14,7 @@ public class ProdutoBO {
 		p.setQuantidade(p.getQuantidade() - qtde);
 	}
 	
-//	public double consultaPreco(int id) {
-//		double preco = 0.0;
-//		
-//		return preco;
-//	}
+	public double consultaPreco(ProdutoTO p) {
+		return p.getValor();
+	}
 }
