@@ -20,7 +20,7 @@ public class CaixaBO {
     //TODO passar eese m�todo pro FuncionarioBO talvez
     public void vendeProduto(int caixa_id, String funcionario, ProdutoTO p, int qtde, String cliente, Date data) {
 
-        if (qtde < p.getQuantidade()) {
+        if (qtde > p.getQuantidade()) {
             JOptionPane.showMessageDialog(null, "Não há produtos suficientes em estoque!", "Resumo Venda", JOptionPane.INFORMATION_MESSAGE);
         } else {
             PedidoTO ped = new PedidoTO();
