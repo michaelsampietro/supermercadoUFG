@@ -2,11 +2,11 @@ package br.com.Pessoa;
 
 public class PessoaTO {
 
-    public int id;
-    public String nome;
-    public String telefone;
-    public String sexo;
-    public String cargo;
+    private int id;
+    private String nome;
+    private String telefone;
+    private String sexo;
+    private String cargo;
 
     public PessoaTO(int id, String nome, String telefone, String sexo, String cargo) {
         this.id = id;
