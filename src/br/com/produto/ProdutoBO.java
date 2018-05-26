@@ -1,7 +1,5 @@
 package br.com.produto;
 
-import br.com.Estoque.EstoqueBO;
-
 public class ProdutoBO {
 
 	public ProdutoTO adicionaProduto(int id, String nome, String descricao, double valor, String embalagem) {

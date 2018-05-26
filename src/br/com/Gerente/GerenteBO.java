@@ -1,9 +1,11 @@
 package br.com.Gerente;
 
 import br.com.Caixa.CaixaBO;
-import br.com.Estoque.EstoqueBO;
+import br.com.Estoque.EstoqueTO;
 import br.com.produto.ProdutoBO;
 import br.com.produto.ProdutoTO;
+
+import javax.swing.*;
 
 public class GerenteBO {
 
@@ -16,24 +18,26 @@ public class GerenteBO {
     public void adicionaEstoque(ProdutoTO p, int qtde) {
         ProdutoBO pbo = new ProdutoBO();
         pbo.adicionaEstoque(p, qtde);
-        EstoqueBO.produtosEstoque.add(p);
+        EstoqueTO.produtosEstoque.add(p);
     }
 
     public void emiteRelatorioVendas() {
-        System.out.println("RELATORIO DE VENDAS:");
+        String msg = "";
         for (int i = 0; i < CaixaBO.relatorioVendas.size(); i++) {
-            System.out.println("Vendas do dia: " + CaixaBO.relatorioVendas.get(i).getValor_total());
-            System.out.println("Funcionario: "+ CaixaBO.relatorioVendas.get(i).getNome_funcionario());
-            System.out.println("---------");
+            msg += "Vendas do dia: " + CaixaBO.relatorioVendas.get(i).getValor_total() + "\n";
+            msg += "Funcionario: " + CaixaBO.relatorioVendas.get(i).getNome_funcionario() + "\n";;
+            msg += "---------\n";
         }
+        JOptionPane.showMessageDialog(null, msg, "Relatório de vendas", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void emiteRelatorioEstoque() {
-        System.out.println("RELATORIO ESTOQUE: ");
-        for (int i = 0; i < EstoqueBO.produtosEstoque.size(); i++) {
-            System.out.println("Produto: " + EstoqueBO.produtosEstoque.get(i).getNome());
-            System.out.println("Quantidade: " + EstoqueBO.produtosEstoque.get(i).getQuantidade());
-            System.out.println("---------");
+        String msg = "";
+        for (int i = 0; i < EstoqueTO.produtosEstoque.size(); i++) {
+            msg += "Produto: " + EstoqueTO.produtosEstoque.get(i).getNome() + "\n";
+            msg += "Quantidade: " + EstoqueTO.produtosEstoque.get(i).getQuantidade() + "\n";
+            msg += "---------\n";
         }
+        JOptionPane.showMessageDialog(null, msg, "Relatório de estoque", JOptionPane.INFORMATION_MESSAGE);
     }
 }

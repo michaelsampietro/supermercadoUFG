@@ -4,7 +4,7 @@ import br.com.produto.ProdutoTO;
 
 import java.util.ArrayList;
 
-public class EstoqueBO {
+public class EstoqueTO {
 
     public static ArrayList<ProdutoTO> produtosEstoque = new ArrayList<>();
 
