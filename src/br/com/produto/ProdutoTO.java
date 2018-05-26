@@ -10,11 +10,10 @@ public class ProdutoTO {
 	private String embalagem; //UN - unidade ou KG - quilo
 	
 	public ProdutoTO(int id, String nome, String descricao, double valor, String embalagem) {
-		this.id = id;
-		this.nome = nome;
+		this.id        = id;
+		this.nome      = nome;
 		this.descricao = descricao;
-		this.valor = valor;
-//		this.quantidade = quantidade;
+		this.valor     = valor;
 		this.embalagem = embalagem;
 	}
 	

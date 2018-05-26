@@ -2,20 +2,24 @@ package br.com.Pessoa;
 
 public class PessoaTO {
 
-    private int id;
+    private int    id;
     private String nome;
     private String telefone;
     private String sexo;
     private String cargo;
 
     public PessoaTO(int id, String nome, String telefone, String sexo, String cargo) {
-        this.id = id;
-        this.nome = nome;
+        this.id       = id;
+        this.nome     = nome;
         this.telefone = telefone;
-        this.sexo = sexo;
-        this.cargo = cargo;
+        this.sexo     = sexo;
+        this.cargo    = cargo;
     }
 
+    
+    /*
+     * GETTERS AND SETTERS
+     */
     public int getId() {
         return id;
     }

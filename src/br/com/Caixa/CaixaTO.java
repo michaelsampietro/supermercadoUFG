@@ -1,7 +1,7 @@
 package br.com.Caixa;
 
 public class CaixaTO {
-    private int id;
+    private int    id;
     private String descricao;
     private String funcionario_abertura;
 
@@ -18,23 +18,18 @@ public class CaixaTO {
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
-
     public String getDescricao() {
         return descricao;
     }
-
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
     public String getFuncionarioAbertura() {
         return funcionario_abertura;
     }
-
     public void setFuncionarioAbertura(String funcionario_abertura) {
         this.funcionario_abertura = funcionario_abertura;
     }
